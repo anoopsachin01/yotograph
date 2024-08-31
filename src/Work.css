@@ -1,0 +1,36 @@
+.work {
+  margin: 10px 40px;
+}
+
+.work > .intro {
+  padding: 0 50px;
+}
+
+.work > .intro > p {
+  font-size: xx-large;
+}
+
+.work > hr{
+    margin: 0;
+}
+
+.work > .works {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-column-gap: 40px;
+  grid-row-gap: 40px;
+  margin: 40px;
+}
+
+.work > .works > .photo{
+    width: 100%;
+    height: calc((100vw)/3 - 80px);
+    background-color: gray;
+    border-radius: 10px;
+}
+
+.work > .works > .photo > img{
+
+    object-fit: c;
+
+}

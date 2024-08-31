@@ -1,0 +1,60 @@
+nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  padding: 10px;
+  margin: 10px 50px;
+  color: black;
+}
+
+nav > .hero > h1 {
+  font-weight: 500;
+  font-size: 32px;
+  margin: 0;
+}
+
+nav > .menu {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+}
+
+nav > .menu > p {
+  font-weight: 300;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+nav > .menu > p:hover {
+  transition: 0.5s;
+  color: darkgray;
+}
+
+nav > .menu > .active {
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
+
+nav > .links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 40px;
+  width: 80px;
+  background-color: #d9d9d9;
+  border-radius: 10px;
+}
+
+nav > .links > svg {
+  width: 17px;
+  height: 17px;
+}
+
+.app > hr {
+  color: gray;
+  margin: 0 40px;
+}
