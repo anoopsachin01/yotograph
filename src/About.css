@@ -1,0 +1,20 @@
+.about{
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    width: 100%;
+    padding: 40px 70px;
+    box-sizing: border-box;
+}
+
+.about > .info{
+    width: 60%;
+}
+
+.about > .profile{
+    width: 40%
+}
+
+.about > .profile > img{
+    width: 100%;
+}

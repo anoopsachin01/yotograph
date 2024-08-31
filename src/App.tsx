@@ -2,6 +2,7 @@ import { useState } from 'react'
 
 import Navbar from './Navbar'
 import Work from './Work'
+import About from './About'
 import './App.css'
 
 function App() {
@@ -11,7 +12,8 @@ function App() {
   return (
     <div className="app">
         <Navbar activeMenu={activeMenu} setActiveMenu={setActiveMenu}/>
-        <Work/>
+        {activeMenu == "Work" && <Work/>}
+        {activeMenu == "About" && <About/>}
     </div>
   )
 }
