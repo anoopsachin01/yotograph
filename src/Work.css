@@ -10,8 +10,8 @@
   font-size: xx-large;
 }
 
-.work > hr{
-    margin: 0;
+.work > hr {
+  margin: 0;
 }
 
 .work > .works {
@@ -22,15 +22,51 @@
   margin: 40px;
 }
 
-.work > .works > .photo{
-    width: 100%;
-    height: calc((100vw)/3 - 80px);
-    background-color: gray;
-    border-radius: 10px;
+.work > .works > .photo {
+  width: 100%;
+  height: calc((100vw) / 3 - 80px);
+  background-color: gray;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
 }
 
-.work > .works > .photo > img{
+.work > .works > .photo > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: all 0.3s ease;
+}
 
-    object-fit: c;
+.work > .works > .photo > img:hover {
+  transform: scale(1.1);
+}
 
+.work > .works > .photo > p {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  color: white;
+  left: 20px;
+  text-wrap: nowrap;
+  width: 90%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: all 0.3s ease;
+}
+
+.work > .works > .photo:hover > p {
+  opacity: 1;
+  visibility: visible;
+}
+
+.work > .works > .photo > .title {
+  top: 10px;
+  font-size: 20px;
+}
+
+.work > .works > .photo > .description {
+  bottom: 10px;
 }
