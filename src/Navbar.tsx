@@ -21,11 +21,10 @@ export default function Navbar(props: NavbarProps) {
         <div className="hero">
           <h1>Yotograph</h1>
         </div>
-        <div className="menu">
-            {...menuItems}
-        </div>
+        <div className="menu">{...menuItems}</div>
         <div className="links">
-          <svg href="google.com"
+          <svg
+            href="google.com"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
             width="24"
@@ -42,6 +41,26 @@ export default function Navbar(props: NavbarProps) {
             <path d="M14 13.5H16.5L17.5 9.5H14V7.5C14 6.47062 14 5.5 16 5.5H17.5V2.1401C17.1743 2.09685 15.943 2 14.6429 2C11.9284 2 10 3.65686 10 6.69971V9.5H7V13.5H10V22H14V13.5Z"></path>
           </svg>
         </div>
+
+        <input type="checkbox" id="sidebar" onChange={()=>console.log("changed")}/>
+        <label htmlFor="sidebar" className="openbutton">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+          >
+            <path d="M3 4H21V6H3V4ZM3 11H21V13H3V11ZM3 18H21V20H3V18Z"></path>
+          </svg>
+        </label>
+        <label htmlFor="sidebar" className="closebutton">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+          >
+            <path d="M11.9997 10.5865L16.9495 5.63672L18.3637 7.05093L13.4139 12.0007L18.3637 16.9504L16.9495 18.3646L11.9997 13.4149L7.04996 18.3646L5.63574 16.9504L10.5855 12.0007L5.63574 7.05093L7.04996 5.63672L11.9997 10.5865Z"></path>
+          </svg>
+        </label>
       </nav>
       <hr />
     </>

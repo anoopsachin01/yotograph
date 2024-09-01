@@ -3,6 +3,7 @@ nav {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  position: relative;
   gap: 50px;
   padding: 10px;
   margin: 10px 50px;
@@ -54,7 +55,63 @@ nav > .links > svg {
   height: 17px;
 }
 
+nav > #sidebar {
+  display: none;
+}
+
+nav > .openbutton,
+.closebutton {
+  display: none;
+  width: 20px;
+  height: 20px;
+}
+
 .app > hr {
   color: gray;
   margin: 0 40px;
+}
+
+@media (max-width: 768px) {
+  nav {
+    margin: 10px 20px;
+  }
+
+  nav > .menu {
+    display: none;
+    gap: 10px;
+    background-color: gray;
+    position: absolute;
+    width: 200px;
+    padding: 20px;
+    border-radius: 8px;
+  }
+
+  #sidebar:checked ~ nav > .menu {
+    display: flex;
+  }
+
+  nav > .links {
+    display: none;
+  }
+
+  nav > .openbutton,
+  .closebutton {
+    display: block;
+  }
+
+  nav > .closebutton {
+    display: none;
+  }
+
+  nav > #sidebar:checked ~ nav > .openbutton {
+    display: none;
+  }
+
+  nav > #sidebar:checked ~ nav > .closebutton {
+    display: block;
+  }
+
+  .app >  hr {
+    margin: 0;
+  }
 }
