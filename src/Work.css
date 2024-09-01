@@ -70,3 +70,41 @@
 .work > .works > .photo > .description {
   bottom: 10px;
 }
+
+@media screen and (max-width: 1200px) {
+  .work > .works {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-column-gap: 40px;
+    grid-row-gap: 40px;
+    margin: 40px;
+  }
+  
+  .work > .works > .photo {
+    width: 100%;
+    height: calc((100vw) / 2 - 100px);
+    background-color: gray;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+  }
+}
+
+@media screen and (max-width: 768px){
+  .work > .works {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    grid-column-gap: 40px;
+    grid-row-gap: 40px;
+    margin: 40px;
+  }
+  
+  .work > .works > .photo {
+    width: 100%;
+    height: calc((100vw) - 160px);
+    background-color: gray;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+  }
+}
