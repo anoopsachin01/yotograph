@@ -4,6 +4,7 @@ import Navbar from './Navbar'
 import Work from './Work'
 import About from './About'
 import Contact from "./Contact"
+import Footer from './Footer'
 import './App.css'
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         {activeMenu == "Work" && <Work/>}
         {activeMenu == "About" && <About/>}
         {activeMenu == "Contact" && <Contact/>}
+        <Footer/>
     </div>
   )
 }

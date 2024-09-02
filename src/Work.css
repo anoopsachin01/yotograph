@@ -19,7 +19,7 @@
   grid-template-columns: repeat(3, minmax(0, 1fr));
   grid-column-gap: 40px;
   grid-row-gap: 40px;
-  margin: 40px;
+  padding: 40px;
 }
 
 .work > .works > .photo {
@@ -77,7 +77,7 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
     grid-column-gap: 40px;
     grid-row-gap: 40px;
-    margin: 40px;
+    padding: 40px;
   }
   
   .work > .works > .photo {
@@ -101,7 +101,7 @@
     grid-template-columns: repeat(1, minmax(0, 1fr));
     grid-column-gap: 40px;
     grid-row-gap: 40px;
-    margin: 40px;
+    padding: 40px;
   }
   
   .work > .works > .photo {
