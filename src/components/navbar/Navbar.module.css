@@ -1,0 +1,124 @@
+.navbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  padding: 40px 80px;
+  color: black;
+}
+
+.hero > h1 {
+  font-weight: 500;
+  font-size: 32px;
+}
+
+.menu {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  list-style-type: none;
+}
+
+.menu > li > a {
+  font-weight: 300;
+  font-size: 16px;
+  text-decoration: none;
+  color: black;
+}
+
+.menu > li > a:hover {
+  transition: 0.5s;
+  color: darkgray;
+}
+
+.menu .active {
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
+
+.social {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  padding: 0 10px;
+  background-color: #d9d9d9;
+  border-radius: 10px;
+  width: 100px;
+  height: 40px;
+}
+
+.social > a {
+  width: 24px;
+  height: 24px;
+}
+
+.social > a > img {
+  width: 24px;
+  height: 24px;
+}
+
+.socialMobile {
+  display: none;
+}
+
+.menuButton {
+  display: none;
+  background: none;
+  border: none;
+  height: 24px;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 20px 30px;
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    gap: 20px;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .showMenu {
+    display: flex;
+  }
+
+  .menuButton {
+    display: block;
+  }
+
+  .social {
+    display: none;
+  }
+
+  .socialMobile {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 15px;
+    padding: 10px 15px;
+    border-radius: 10px;
+    background-color: #d9d9d9;
+  }
+
+  .socialMobile > a {
+    width: 20px;
+    height: 20px;
+  }
+
+  .socialMobile > a > img {
+    width: 20px;
+    height: 20px;
+  }
+}

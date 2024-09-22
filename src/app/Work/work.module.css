@@ -1,0 +1,53 @@
+.work {
+  margin: 10px 40px;
+}
+
+.work > .intro {
+  max-width: 90%;
+  padding: 20px 50px 30px;
+}
+
+.work > .intro > p {
+  font-size: xx-large;
+}
+
+.work > .intro > p > span {
+  color: #ef4136;
+  font-weight: 500;
+}
+
+.work > hr {
+  margin: 0;
+}
+
+.work > .works {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-column-gap: 40px;
+  grid-row-gap: 40px;
+  padding: 40px;
+}
+
+@media (max-width: 1200px) {
+  .work > .works {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-column-gap: 40px;
+    grid-row-gap: 40px;
+    padding: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .work {
+    margin: 0;
+  }
+
+  .work > .works {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    grid-column-gap: 40px;
+    grid-row-gap: 40px;
+    padding: 40px;
+  }
+}

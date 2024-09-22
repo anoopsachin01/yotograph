@@ -1,0 +1,34 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header > hr {
+  color: gray;
+  margin: 0 40px;
+}
+
+body{
+  min-height: 100dvh;
+  position: relative;
+  padding-bottom: 45px;
+}
+
+main{
+  transition-property: opacity, transform, filter;
+  transition-timing-function: ease-in-out;
+  transition-duration: 500ms;
+}
+
+.transition{
+  opacity: 0;
+  filter: blur(5px);
+}
+
+
+@media (max-width: 768px) {
+  header > hr {
+    margin: 0 20px;
+  }
+}

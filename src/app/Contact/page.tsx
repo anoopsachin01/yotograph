@@ -1,17 +1,20 @@
-import { useState } from "react";
-import "./Contact.css";
+"use client"
 
-export default function Contact() {
-  const [email, setEmail] = useState("");
+import { useState } from "react";
+import styles from "@/app/Contact/page.module.css"
+
+export default function Contact(){
+
+    const [email, setEmail] = useState("");
 
   const handleSubmit = () => {
     console.log(email);
   };
 
-  return (
-    <div className="contact">
+    return(
+        <div className={styles.contact}>
       <h1>yogesh@yotograph.com</h1>
-      <div className="location">
+      <div className={styles.location}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
@@ -21,7 +24,7 @@ export default function Contact() {
         </svg>
         <p>Chennai</p>
       </div>
-      <p className="available">Available for new projects</p>
+      <p className={styles.available}>Available for new projects</p>
 
       <p>
         I'm currently taking photography projects only. Drop me an email and
@@ -31,12 +34,13 @@ export default function Contact() {
       <hr />
       <form onSubmit={handleSubmit}>
         <label htmlFor="email">Interested, Leave your contact mail below:</label>
-        <div className="email">
+        <div className={styles.email}>
           <input
             type="email"
             name="email"
             id="email"
             value={email}
+            placeholder="Enter your email here"
             onChange={(e) => setEmail(e.target.value)}
             required
           />
@@ -44,5 +48,5 @@ export default function Contact() {
         </div>
       </form>
     </div>
-  );
+    )
 }

@@ -1,0 +1,78 @@
+.imageCard {
+    width: 100%;
+    height: calc((100vw) / 3 - 80px);
+    background-color: gray;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .imageCard > figure {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  .imageWrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .image {
+    object-fit: cover; /* Ensures the image covers the div */
+    object-position: center; /* Centers the image */
+    transition: all 0.5s ease;
+  }
+  
+  .image:hover {
+    transform: scale(1.1);
+  }
+  
+  .imageCard > figure > figcaption > p {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    left: 20px;
+    color: white;
+    width: 90%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: all 0.5s ease;
+  }
+  
+  .imageCard:hover > figure > figcaption > p {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .imageCard:hover .title {
+    transform: translateY(15px);
+  }
+  
+  .imageCard:hover .description {
+    transform: translateY(-15px);
+  }
+  
+  .title {
+    top: 0;
+    font-size: 20px;
+  }
+  
+  .description {
+    bottom: 0px;
+  }
+  
+  @media (max-width: 1200px) {
+    .imageCard {
+      height: calc((100vw) / 2 - 100px);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .imageCard {
+      height: calc((100vw) - 80px);
+    }
+  }
