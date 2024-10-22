@@ -6,6 +6,7 @@ interface ImageCardProps {
   alt: string;
   title: string;
   description: string;
+  size: string;
 }
 
 export default function ImageCard({
@@ -13,18 +14,22 @@ export default function ImageCard({
   alt,
   title,
   description,
+  size
 }: ImageCardProps) {
+  const appliedSize = size || "default";
+  console.log(appliedSize)
+
   return (
     <article className={styles.imageCard}>
       <figure>
-        <div className={styles.imageWrapper}>
+        <div className={`${styles.imageWrapper} ${styles[appliedSize]}`}>
           <Image 
             src={src} 
             alt={alt} 
-            fill // This fills the parent div, covering it
+            fill
             sizes="(max-width: 768px) 80vw, (max-width: 1200px) 40vw, 30vw"
             className={styles.image} 
-            priority // Optionally prioritize loading for above-the-fold content
+            priority
           />
         </div>
         <figcaption>
@@ -35,3 +40,4 @@ export default function ImageCard({
     </article>
   );
 }
+

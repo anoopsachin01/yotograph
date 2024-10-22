@@ -1,0 +1,23 @@
+.blog{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-column-gap: 40px;
+    grid-row-gap: 40px;
+    padding: 40px;
+    margin: 40px;
+    max-width: 1200px;
+    justify-items: center;
+}
+
+@media (max-width: 425px) {
+  .blog{
+    padding: 10px;
+    gap: 20px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .blog{
+    margin: auto;
+  }
+}

@@ -19,6 +19,7 @@
   flex-direction: row;
   gap: 50px;
   list-style-type: none;
+  z-index: 10;
 }
 
 .menu > li > a {

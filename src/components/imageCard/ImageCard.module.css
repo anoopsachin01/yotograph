@@ -1,10 +1,24 @@
 .imageCard {
+  display: inline-block;
     width: 100%;
-    height: calc((100vw) / 3 - 80px);
+    aspect-ratio: 1/1;
     background-color: gray;
-    border-radius: 10px;
+    border-radius: 5px;
     overflow: hidden;
     position: relative;
+  }
+
+  .imageCard.wide{
+    grid-column: span 2;
+  }
+
+  .imageCard.tall{
+    grid-row: span 2;
+  }
+
+  .imageCard.big{
+    grid-column: 2;
+    grid-row: 2;
   }
   
   .imageCard > figure {
@@ -63,16 +77,4 @@
   
   .description {
     bottom: 0px;
-  }
-  
-  @media (max-width: 1200px) {
-    .imageCard {
-      height: calc((100vw) / 2 - 100px);
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .imageCard {
-      height: calc((100vw) - 80px);
-    }
   }
