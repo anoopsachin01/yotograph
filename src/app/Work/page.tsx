@@ -6,6 +6,7 @@ import styles from "@/app/Work/work.module.css";
 export default function Work() {
   const imageCards = imageCardData.map((img, index) => (
     <ImageCard
+      size="600"
       key={index}
       src={img.src}
       alt={img.alt}
